@@ -2,9 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { Rocket } from 'lucide-react';
 import DarkModeToggle from './DarkModeToggle';
+import AudioToggle from './AudioToggle';
+import StarMapNavigation from './StarMapNavigation';
 
 const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [showStarMap, setShowStarMap] = useState(false);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +29,10 @@ const Navigation: React.FC = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const toggleStarMap = () => {
+    setShowStarMap(!showStarMap);
+  };
   
   return (
     <header 
@@ -46,16 +53,30 @@ const Navigation: React.FC = () => {
             </span>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="nav-link">Home</button>
-            <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
-            <button onClick={() => scrollToSection('skills')} className="nav-link">Skills</button>
-            <button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button>
-            <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
+          <div className="hidden md:flex items-center space-x-4">
+            <button 
+              className={`nav-link ${showStarMap ? 'text-cosmic-neon' : ''}`}
+              onClick={toggleStarMap}
+            >
+              Star Map
+            </button>
+            
+            {!showStarMap && (
+              <>
+                <button onClick={() => scrollToSection('home')} className="nav-link">Home</button>
+                <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
+                <button onClick={() => scrollToSection('skills')} className="nav-link">Skills</button>
+                <button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button>
+                <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
+              </>
+            )}
+            
+            <AudioToggle />
             <DarkModeToggle />
           </div>
           
           <div className="md:hidden flex items-center space-x-4">
+            <AudioToggle />
             <DarkModeToggle />
             <button 
               className="text-cosmic-star hover:text-cosmic-electric transition-colors"
@@ -67,6 +88,13 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </nav>
+        
+        {/* Star Map Navigation */}
+        {showStarMap && (
+          <div className="py-6 hidden md:block">
+            <StarMapNavigation />
+          </div>
+        )}
       </div>
     </header>
   );

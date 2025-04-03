@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import TypingEffect from './TypingEffect';
 
 const HeroSection: React.FC = () => {
   const scrollToAbout = () => {
@@ -18,8 +19,12 @@ const HeroSection: React.FC = () => {
           <span className="text-cosmic-electric"> Universe</span>
         </h1>
         
-        <p className="cosmic-subtitle max-w-2xl mx-auto mb-12 text-cosmic-star">
-          A Developer Exploring the Galaxies of Code
+        <p className="cosmic-subtitle max-w-2xl mx-auto mb-12">
+          <TypingEffect 
+            text="A Developer Exploring the Galaxies of Code" 
+            speed={70}
+            className="text-cosmic-nebula"
+          />
         </p>
         
         <div className="relative mb-12">

@@ -5,6 +5,34 @@ import { skills } from '@/data/portfolioData';
 const SkillsSection: React.FC = () => {
   const [hoveredSkill, setHoveredSkill] = useState<number | null>(null);
   
+  // Function to generate proficiency rings
+  const renderProficiencyRings = (skillId: number, proficiency: number, color: string) => {
+    const isHovered = hoveredSkill === skillId;
+    const ringCount = Math.floor(proficiency / 10); // 1 ring per 10% proficiency
+    
+    return [...Array(ringCount)].map((_, index) => {
+      const size = 60 + (index + 1) * 8; // Increasing size for each ring
+      const animationDuration = 10 - (index * 0.5); // Faster animation for outer rings
+      const animationDirection = index % 2 === 0 ? 'normal' : 'reverse'; // Alternate directions
+      
+      return (
+        <div
+          key={`ring-${skillId}-${index}`}
+          className={`absolute rounded-full border border-cosmic-electric transition-opacity duration-300 ${isHovered ? 'opacity-80' : 'opacity-30'}`}
+          style={{
+            width: `${size}px`,
+            height: `${size}px`,
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%) rotate(0deg)',
+            animation: `orbit ${animationDuration}s linear infinite ${animationDirection}`,
+            borderColor: color,
+          }}
+        ></div>
+      );
+    });
+  };
+  
   return (
     <section id="skills" className="cosmic-section">
       <div className="cosmic-container">
@@ -48,6 +76,9 @@ const SkillsSection: React.FC = () => {
                 onMouseEnter={() => setHoveredSkill(skill.id)}
                 onMouseLeave={() => setHoveredSkill(null)}
               >
+                {/* Proficiency rings - only render when hovered */}
+                {renderProficiencyRings(skill.id, skill.proficiency, skill.color)}
+                
                 <div className="flex flex-col items-center justify-center h-full">
                   <span className="text-2xl mb-1">{skill.icon}</span>
                   <span className="font-orbitron text-xs">{skill.name}</span>

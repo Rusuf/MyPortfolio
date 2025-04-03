@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -125,6 +124,22 @@ export default {
 					'0%': { transform: 'scale(0)', opacity: '0' },
 					'50%': { transform: 'scale(15)', opacity: '0.8' },
 					'100%': { transform: 'scale(30)', opacity: '0' }
+				},
+				'ping': {
+					'75%, 100%': { transform: 'translate(-50%, -50%) scale(2)', opacity: '0' }
+				},
+				'fly-rocket': {
+					'0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
+					'50%': { transform: 'translate(50%, -150%) rotate(-45deg)' },
+					'100%': { transform: 'translate(150%, -250%) rotate(-45deg)' }
+				},
+				'meteor-glow': {
+					'0%, 100%': { opacity: '0.3' },
+					'50%': { opacity: '0.7' }
+				},
+				'spin': {
+					'from': { transform: 'rotate(0deg)' },
+					'to': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -136,7 +151,11 @@ export default {
 				'rocket-launch': 'rocket-launch 1s ease-out',
 				'comet': 'comet 10s linear',
 				'glow': 'glow 2s ease-in-out infinite',
-				'black-hole': 'black-hole 0.5s ease-in-out'
+				'black-hole': 'black-hole 0.5s ease-in-out',
+				'ping': 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
+				'fly-rocket': 'fly-rocket 1.5s linear forwards',
+				'meteor-glow': 'meteor-glow 2s ease-in-out infinite',
+				'spin': 'spin 60s linear infinite'
 			}
 		}
 	},

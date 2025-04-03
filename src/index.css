@@ -227,6 +227,47 @@
       opacity: 0;
     }
   }
+
+  /* Ping Animation for signal waves */
+  @keyframes ping {
+    75%, 100% {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
+  }
+
+  /* Rocket Flying Animation */
+  @keyframes flyRocket {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+      transform: translate(50%, -150%) rotate(-45deg);
+    }
+    100% {
+      transform: translate(150%, -250%) rotate(-45deg);
+    }
+  }
+
+  /* Meteor Glow Animation */
+  @keyframes meteor-glow {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* Galaxy Spin Animation */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 /* Star background animation */

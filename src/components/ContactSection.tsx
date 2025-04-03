@@ -10,6 +10,7 @@ const ContactSection: React.FC = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [signalSent, setSignalSent] = useState(false);
   const { toast } = useToast();
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -21,11 +22,14 @@ const ContactSection: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // Start signal animation
+    setSignalSent(true);
+    
     // Simulate API call
     setTimeout(() => {
       toast({
-        title: "Message Received!",
-        description: "Thanks for reaching out! I'll get back to you as soon as possible.",
+        title: "Signal received!",
+        description: "I'll respond faster than light speed.",
         duration: 5000,
       });
       
@@ -35,6 +39,11 @@ const ContactSection: React.FC = () => {
         message: ''
       });
       setIsSubmitting(false);
+      
+      // Reset animation after 2 seconds
+      setTimeout(() => {
+        setSignalSent(false);
+      }, 2000);
     }, 1500);
   };
   
@@ -52,7 +61,7 @@ const ContactSection: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-cosmic-nebula bg-opacity-20 p-8 rounded-lg backdrop-blur-sm border border-cosmic-galaxy">
+          <div className="bg-cosmic-nebula bg-opacity-20 p-8 rounded-lg backdrop-blur-sm border border-cosmic-galaxy relative">
             <h3 className="text-xl font-orbitron font-bold text-cosmic-electric mb-6">
               Beam Me a Message
             </h3>
@@ -109,14 +118,69 @@ const ContactSection: React.FC = () => {
                   <>
                     <span>Send Message</span>
                     <Send className="ml-2" size={16} />
-                    {/* Signal animation on hover */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
-                      <div className="w-8 h-8 rounded-full border-2 border-cosmic-electric animate-ping"></div>
-                    </div>
                   </>
                 )}
               </button>
             </form>
+            
+            {/* Signal sent animation */}
+            {signalSent && (
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Central pulse */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div className="w-4 h-4 rounded-full bg-cosmic-electric animate-ping"></div>
+                </div>
+                
+                {/* Signal waves */}
+                {[...Array(3)].map((_, i) => (
+                  <div 
+                    key={i} 
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full border border-cosmic-electric"
+                    style={{
+                      width: `${(i + 1) * 50}px`,
+                      height: `${(i + 1) * 50}px`,
+                      opacity: 1 - i * 0.2,
+                      animation: `ping 1s cubic-bezier(0, 0, 0.2, 1) infinite`,
+                      animationDelay: `${i * 0.2}s`
+                    }}
+                  ></div>
+                ))}
+                
+                {/* Flying rocket */}
+                <div 
+                  className="absolute"
+                  style={{
+                    top: '50%',
+                    left: '50%',
+                    width: '20px',
+                    height: '20px',
+                    animation: 'flyRocket 1.5s linear forwards'
+                  }}
+                >
+                  <div className="w-6 h-6 text-cosmic-electric">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                      <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                    </svg>
+                  </div>
+                  
+                  {/* Trailing stars */}
+                  {[...Array(5)].map((_, i) => (
+                    <div 
+                      key={i}
+                      className="absolute w-1 h-1 rounded-full bg-cosmic-star"
+                      style={{
+                        top: `${Math.random() * 10 - 5}px`,
+                        left: `${-5 - i * 3}px`,
+                        opacity: 0.8 - i * 0.15
+                      }}
+                    ></div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
           
           {/* Social Links */}
@@ -187,8 +251,10 @@ const ContactSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-20 text-center">
-          <p className="text-cosmic-nebula">
+        <div className="mt-16 text-center">
+          <RandomQuote />
+          
+          <p className="text-cosmic-nebula mt-4">
             Built by Developer for the 1 Million Devs Hackathon
           </p>
         </div>

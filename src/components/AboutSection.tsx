@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { aboutTimeline } from '@/data/portfolioData';
+import AchievementBadges from './AchievementBadges';
 
 const AboutSection: React.FC = () => {
   return (
@@ -44,6 +45,9 @@ const AboutSection: React.FC = () => {
             </div>
           ))}
         </div>
+        
+        {/* Achievements Section */}
+        <AchievementBadges />
       </div>
     </section>
   );

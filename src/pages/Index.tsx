@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import StarsBackground from '@/components/StarsBackground';
+import DynamicNebulaBackground from '@/components/DynamicNebulaBackground';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import SkillsSection from '@/components/SkillsSection';
@@ -10,17 +11,23 @@ import ContactSection from '@/components/ContactSection';
 import ScrollToTop from '@/components/ScrollToTop';
 import CursorEffect from '@/components/CursorEffect';
 import Comet from '@/components/Comet';
+import RandomQuote from '@/components/RandomQuote';
 
 const Index = () => {
   useEffect(() => {
     // Update document title
     document.title = "Cosmic Developer Portfolio";
+    
+    // Preload audio file
+    const audio = new Audio('/space-ambiance.mp3');
+    audio.preload = 'auto';
   }, []);
 
   return (
     <div className="overflow-x-hidden">
       {/* Background Elements */}
       <StarsBackground />
+      <DynamicNebulaBackground />
       <Comet />
       
       {/* Navigation */}
