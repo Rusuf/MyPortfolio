@@ -66,11 +66,17 @@ export default {
 				// Cosmic Theme Colors
 				cosmic: {
 					space: '#0A0A23',
+					'space-dark': '#050510',
 					nebula: '#4B0082',
+					'nebula-dark': '#220033',
 					star: '#F5F5F5',
+					'star-dark': '#D0D0D0', 
 					galaxy: '#1E90FF',
+					'galaxy-dark': '#0A6AAD',
 					neon: '#FF69B4',
-					electric: '#00FFFF'
+					'neon-dark': '#D84F98',
+					electric: '#00FFFF',
+					'electric-dark': '#00C7C7'
 				}
 			},
 			fontFamily: {
@@ -114,6 +120,11 @@ export default {
 				'glow': {
 					'0%, 100%': { boxShadow: '0 0 5px #FF69B4, 0 0 10px #FF69B4' },
 					'50%': { boxShadow: '0 0 20px #FF69B4, 0 0 30px #FF69B4' }
+				},
+				'black-hole': {
+					'0%': { transform: 'scale(0)', opacity: '0' },
+					'50%': { transform: 'scale(15)', opacity: '0.8' },
+					'100%': { transform: 'scale(30)', opacity: '0' }
 				}
 			},
 			animation: {
@@ -124,7 +135,8 @@ export default {
 				'float': 'float 5s ease-in-out infinite',
 				'rocket-launch': 'rocket-launch 1s ease-out',
 				'comet': 'comet 10s linear',
-				'glow': 'glow 2s ease-in-out infinite'
+				'glow': 'glow 2s ease-in-out infinite',
+				'black-hole': 'black-hole 0.5s ease-in-out'
 			}
 		}
 	},

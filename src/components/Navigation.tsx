@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Rocket } from 'lucide-react';
+import DarkModeToggle from './DarkModeToggle';
 
 const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -51,9 +52,11 @@ const Navigation: React.FC = () => {
             <button onClick={() => scrollToSection('skills')} className="nav-link">Skills</button>
             <button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button>
             <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
+            <DarkModeToggle />
           </div>
           
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-4">
+            <DarkModeToggle />
             <button 
               className="text-cosmic-star hover:text-cosmic-electric transition-colors"
               aria-label="Toggle menu"

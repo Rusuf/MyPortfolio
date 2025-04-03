@@ -95,6 +95,11 @@
     @apply bg-cosmic-space text-cosmic-star overflow-x-hidden;
     background: linear-gradient(to bottom, #0A0A23, #4B0082);
     background-attachment: fixed;
+    transition: all 0.5s ease;
+  }
+
+  body.dark-mode {
+    background: linear-gradient(to bottom, #050510, #220033);
   }
 
   /* Custom Scrollbar */
@@ -199,6 +204,28 @@
 
   .cosmic-input:focus {
     box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+  }
+
+  /* Black Hole Animation */
+  .black-hole-animation {
+    animation: black-hole 0.5s ease-in-out;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+    z-index: 5;
+  }
+
+  @keyframes black-hole {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(15);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(30);
+      opacity: 0;
+    }
   }
 }
 
