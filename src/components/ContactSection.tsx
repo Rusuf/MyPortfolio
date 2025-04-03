@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, Send, Twitter } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import RandomQuote from '@/components/RandomQuote';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
