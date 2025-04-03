@@ -40,6 +40,7 @@ const Index = () => {
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />
+        <RandomQuote />
       </main>
       
       {/* UI Elements */}
