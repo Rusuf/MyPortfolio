@@ -1,7 +1,7 @@
+
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, Send, Twitter } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
-import RandomQuote from '@/components/RandomQuote';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -249,14 +249,6 @@ const ContactSection: React.FC = () => {
               </a>
             </div>
           </div>
-        </div>
-        
-        <div className="mt-16 text-center">
-          <RandomQuote />
-          
-          <p className="text-cosmic-nebula mt-4">
-            Built by Developer for the 1 Million Devs Hackathon
-          </p>
         </div>
       </div>
     </section>

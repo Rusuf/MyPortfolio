@@ -11,7 +11,6 @@ import ContactSection from '@/components/ContactSection';
 import ScrollToTop from '@/components/ScrollToTop';
 import CursorEffect from '@/components/CursorEffect';
 import Comet from '@/components/Comet';
-import RandomQuote from '@/components/RandomQuote';
 
 const Index = () => {
   useEffect(() => {
@@ -40,7 +39,6 @@ const Index = () => {
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />
-        <RandomQuote />
       </main>
       
       {/* UI Elements */}
