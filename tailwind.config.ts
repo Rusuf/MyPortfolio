@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Cosmic Theme Colors
+				cosmic: {
+					space: '#0A0A23',
+					nebula: '#4B0082',
+					star: '#F5F5F5',
+					galaxy: '#1E90FF',
+					neon: '#FF69B4',
+					electric: '#00FFFF'
 				}
+			},
+			fontFamily: {
+				orbitron: ['Orbitron', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,25 +83,48 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'twinkle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				'orbit': {
+					'0%': { transform: 'rotate(0deg) translateX(120px) rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg) translateX(120px) rotate(-360deg)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'rocket-launch': {
+					'0%': { transform: 'translateY(0)' },
+					'100%': { transform: 'translateY(-10px)' }
+				},
+				'comet': {
+					'0%': { transform: 'translateX(-100%) translateY(-100%)', opacity: '0' },
+					'10%, 90%': { opacity: '1' },
+					'100%': { transform: 'translateX(100vw) translateY(100vh)', opacity: '0' }
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 5px #FF69B4, 0 0 10px #FF69B4' },
+					'50%': { boxShadow: '0 0 20px #FF69B4, 0 0 30px #FF69B4' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'twinkle': 'twinkle 3s ease-in-out infinite',
+				'orbit': 'orbit 20s linear infinite',
+				'float': 'float 5s ease-in-out infinite',
+				'rocket-launch': 'rocket-launch 1s ease-out',
+				'comet': 'comet 10s linear',
+				'glow': 'glow 2s ease-in-out infinite'
 			}
 		}
 	},

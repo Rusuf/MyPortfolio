@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +92,123 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-cosmic-space text-cosmic-star overflow-x-hidden;
+    background: linear-gradient(to bottom, #0A0A23, #4B0082);
+    background-attachment: fixed;
   }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(10, 10, 35, 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(30, 144, 255, 0.7);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 105, 180, 0.7);
+  }
+}
+
+@layer components {
+  .cosmic-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .cosmic-section {
+    @apply min-h-screen flex flex-col justify-center py-20;
+    scroll-margin-top: 80px;
+  }
+
+  .cosmic-title {
+    @apply text-4xl md:text-5xl font-orbitron font-bold text-cosmic-electric mb-6;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+
+  .cosmic-subtitle {
+    @apply text-xl md:text-2xl font-orbitron text-cosmic-nebula mb-8;
+  }
+
+  .star {
+    @apply absolute bg-cosmic-star rounded-full animate-twinkle;
+  }
+
+  .planet {
+    @apply absolute rounded-full;
+  }
+
+  .nav-link {
+    @apply relative font-orbitron text-cosmic-star hover:text-cosmic-neon transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-cosmic-neon transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+    box-shadow: 0 0 8px #FF69B4;
+  }
+
+  .glow-on-hover {
+    @apply transition-all duration-300;
+  }
+
+  .glow-on-hover:hover {
+    text-shadow: 0 0 8px currentColor;
+  }
+
+  .cosmic-button {
+    @apply px-6 py-3 bg-cosmic-galaxy text-white font-orbitron rounded-full transition-all duration-300 border-2 border-transparent;
+  }
+
+  .cosmic-button:hover {
+    @apply border-cosmic-neon;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+  }
+
+  .skill-planet {
+    @apply rounded-full flex items-center justify-center text-cosmic-star font-orbitron border-2 transition-all duration-300;
+  }
+
+  .skill-planet:hover {
+    @apply scale-110;
+    box-shadow: 0 0 20px currentColor;
+  }
+
+  .project-galaxy {
+    @apply bg-opacity-20 bg-cosmic-nebula backdrop-blur-sm rounded-lg p-6 transition-all duration-500 border border-transparent;
+  }
+
+  .project-galaxy:hover {
+    @apply border-cosmic-neon;
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+    transform: translateY(-5px);
+  }
+
+  .cosmic-input {
+    @apply w-full bg-cosmic-space bg-opacity-50 text-cosmic-star border border-cosmic-galaxy rounded-md px-4 py-2 focus:outline-none focus:border-cosmic-neon transition-all duration-300;
+  }
+
+  .cosmic-input:focus {
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+  }
+}
+
+/* Star background animation */
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
