@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { projects } from '@/data/portfolioData';
 import { ExternalLink, Github, X } from 'lucide-react';
@@ -25,7 +24,7 @@ const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className="cosmic-section">
       <div className="cosmic-container">
-        <h2 className="cosmic-title text-center">Galaxies I've Built</h2>
+        <h2 className="cosmic-title text-center">My Projects</h2>
         
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-lg text-cosmic-star">

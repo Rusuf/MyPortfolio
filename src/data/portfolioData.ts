@@ -1,4 +1,3 @@
-
 export interface Skill {
   id: number;
   name: string;
@@ -155,31 +154,37 @@ export const aboutTimeline = [
   {
     id: 1,
     year: "2020",
-    title: "Started Coding Journey",
-    description: "Discovered my passion for web development and began learning HTML, CSS, and JavaScript."
+    title: "Started Coding Journey During COVID",
+    description: "Discovered my passion for programming during the pandemic lockdown. Started learning web development fundamentals with HTML, CSS, and JavaScript through online resources and self-study."
   },
   {
     id: 2,
     year: "2021",
-    title: "First Web Application",
-    description: "Built my first complete web application using React and deployed it online."
+    title: "University Projects & Team Collaboration",
+    description: "Deepened my understanding of software development through university coursework. Started working on collaborative projects with fellow students, gaining experience in version control and team development practices."
   },
   {
     id: 3,
     year: "2022",
-    title: "Expanded Knowledge",
-    description: "Dived deeper into backend technologies and database management with Node.js and MongoDB."
+    title: "First Hackathon Experience",
+    description: "Participated in my first hackathon, working under pressure to deliver innovative solutions. Enhanced my problem-solving skills and learned to work effectively in time-constrained environments."
   },
   {
     id: 4,
     year: "2023",
-    title: "Professional Development",
-    description: "Started working on freelance projects and contributed to open-source communities."
+    title: "DevFest Hackathon & Advanced Projects",
+    description: "Competed in DevFest hackathon, showcasing my growing expertise in web development. Worked on more complex projects incorporating modern frameworks like React and Node.js. Started contributing to open-source projects."
   },
   {
     id: 5,
     year: "2024",
-    title: "1 Million Devs Hackathon",
-    description: "Participated in the hackathon to push my skills further and connect with other developers."
+    title: "Portfolio Development & Advanced Skills",
+    description: "Building comprehensive portfolio showcasing my projects and skills. Focusing on advanced web technologies and preparing for final year projects. Continued participation in hackathons and coding challenges."
+  },
+  {
+    id: 6,
+    year: "2025",
+    title: "Final Year & Graduation",
+    description: "Completing my degree with a focus on full-stack development. Working on final year projects and preparing to transition into the professional tech industry. Ready to apply my accumulated knowledge in real-world applications."
   }
 ];

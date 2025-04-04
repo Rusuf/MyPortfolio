@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import StarsBackground from '@/components/StarsBackground';
@@ -15,7 +14,7 @@ import Comet from '@/components/Comet';
 const Index = () => {
   useEffect(() => {
     // Update document title
-    document.title = "Cosmic Developer Portfolio";
+    document.title = "Mathwaque Rufus | Portfolio";
     
     // Preload audio file
     const audio = new Audio('/space-ambiance.mp3');

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, Send, Twitter } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
@@ -50,12 +49,12 @@ const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="cosmic-section">
       <div className="cosmic-container">
-        <h2 className="cosmic-title text-center">Send a Signal to My Galaxy</h2>
+        <h2 className="cosmic-title text-center">Get in Touch</h2>
         
         <div className="max-w-3xl mx-auto text-center mb-12">
           <p className="text-lg text-cosmic-star">
-            Want to discuss a project, collaboration opportunity, or just say hello?
-            Use the interstellar communication system below to reach out to me!
+            Interested in collaboration, have a project in mind, or want to discuss opportunities?
+            Feel free to reach out through any of the channels below.
           </p>
         </div>
         
@@ -63,7 +62,7 @@ const ContactSection: React.FC = () => {
           {/* Contact Form */}
           <div className="bg-cosmic-nebula bg-opacity-20 p-8 rounded-lg backdrop-blur-sm border border-cosmic-galaxy relative">
             <h3 className="text-xl font-orbitron font-bold text-cosmic-electric mb-6">
-              Beam Me a Message
+              Send a Message
             </h3>
             
             <form onSubmit={handleSubmit}>
@@ -186,13 +185,13 @@ const ContactSection: React.FC = () => {
           {/* Social Links */}
           <div className="flex flex-col justify-center">
             <h3 className="text-xl font-orbitron font-bold text-cosmic-electric mb-8">
-              Other Cosmic Coordinates
+              Connect With Me
             </h3>
             
             <div className="space-y-6">
               <a 
-                href="https://github.com/" 
-                target="_blank" 
+                href="https://github.com/Rusuf"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-cosmic-space bg-opacity-50 rounded-lg border border-transparent hover:border-cosmic-neon transition-all duration-300 group"
               >
@@ -201,7 +200,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-cosmic-electric font-orbitron">GitHub</h4>
-                  <p className="text-cosmic-star text-sm">Check out my code repositories</p>
+                  <p className="text-cosmic-star text-sm">View my projects and contributions</p>
                 </div>
               </a>
               
@@ -216,7 +215,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-cosmic-electric font-orbitron">LinkedIn</h4>
-                  <p className="text-cosmic-star text-sm">Connect with me professionally</p>
+                  <p className="text-cosmic-star text-sm">Let's connect professionally</p>
                 </div>
               </a>
               
@@ -231,7 +230,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-cosmic-electric font-orbitron">Twitter</h4>
-                  <p className="text-cosmic-star text-sm">Follow me for updates</p>
+                  <p className="text-cosmic-star text-sm">Follow my tech journey</p>
                 </div>
               </a>
               

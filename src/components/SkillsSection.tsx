@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { skills } from '@/data/portfolioData';
 
@@ -36,12 +35,11 @@ const SkillsSection: React.FC = () => {
   return (
     <section id="skills" className="cosmic-section">
       <div className="cosmic-container">
-        <h2 className="cosmic-title text-center">My Cosmic Arsenal</h2>
+        <h2 className="cosmic-title text-center">My Skills</h2>
         
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-lg text-cosmic-star">
-            Navigating through the vast universe of technologies, I've mastered various tools and languages.
-            Each skill represents a planet in my cosmic arsenal, ready to be deployed in the right project.
+            Here are the technologies and tools I specialize in, ready to be deployed in your next project.
           </p>
         </div>
         

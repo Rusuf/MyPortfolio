@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -270,13 +269,70 @@
   }
 }
 
-/* Star background animation */
+/* Stars Container and Animation */
 .stars-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #F5F5F5, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #F5F5F5, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #F5F5F5, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #F5F5F5, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #F5F5F5, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #F5F5F5, rgba(0,0,0,0));
+  background-repeat: repeat;
+  animation: twinkle 5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* Rocket Launch Animation */
+@keyframes launch {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-launch {
+  animation: launch 2s ease-in-out infinite;
+}
+
+/* Constellation Navigation */
+.constellation-nav {
+  position: relative;
+}
+
+.nav-item {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -32px;
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(90deg, #FF69B4 0%, transparent 100%);
+  opacity: 0.3;
+  transform: translateY(-50%);
+}
+
+.nav-item:last-child::before {
+  display: none;
+}
+
+/* Nebula Cloud Effect */
+.nebula-cloud {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  background: radial-gradient(circle at center, #1E90FF 0%, transparent 70%);
+  filter: blur(20px);
+  opacity: 0.2;
+  pointer-events: none;
 }
