@@ -52,7 +52,7 @@ export const projects: Project[] = [
     problem: "Users need a way to plan their meals and track their nutrition.",
     solution: "An intelligent tool for personalized meal planning and nutrition tracking. This project was showcased at a Tech Expo for its innovative approach.",
     technologies: ["React", "Node.js", "MongoDB", "Express"],
-    image: "/images/meal-planner.png",
+    image: "/images/meal-planner.svg",
     liveDemoUrl: "#",
     githubUrl: "https://github.com/Rusuf/meal-planner"
   },
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     problem: "Pet owners need a simple way to manage their pet's health and appointments.",
     solution: "A CRUD application using Django that increased scheduling productivity by 40%. Manages appointments, pet health records, and reminders.",
     technologies: ["Django", "Python", "RESTful APIs"],
-    image: "/images/petcare.png",
+    image: "/images/petcare.svg",
     liveDemoUrl: "#",
     githubUrl: "https://github.com/Rusuf/PetCare"
   },
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     problem: "There is a need for real-time disease tracking and visualization.",
     solution: "An interactive dashboard using Python and Chart.js that won 1st place in a hackathon. Recognized for innovation in health data visualization.",
     technologies: ["Python", "Chart.js", "Flask"],
-    image: "/images/health-analytics.png",
+    image: "/images/health-analytics.svg",
     liveDemoUrl: "#",
     githubUrl: "https://github.com/Rusuf/CEMA"
   }
