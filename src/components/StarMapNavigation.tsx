@@ -13,11 +13,12 @@ const StarMapNavigation: React.FC = () => {
   const [hoveredStar, setHoveredStar] = useState<string | null>(null);
   
   const navLinks: NavLink[] = [
-    { id: 'home', label: 'Home', x: 20, y: 30 },
-    { id: 'about', label: 'About', x: 35, y: 60 },
-    { id: 'skills', label: 'Skills', x: 50, y: 20 },
-    { id: 'projects', label: 'Projects', x: 65, y: 70 },
-    { id: 'contact', label: 'Contact', x: 80, y: 40 },
+    { id: 'home', label: 'Home', x: 10, y: 50 },
+    { id: 'about', label: 'About', x: 25, y: 50 },
+    { id: 'skills', label: 'Skills', x: 40, y: 50 },
+    { id: 'projects', label: 'Projects', x: 55, y: 50 },
+    { id: 'certifications', label: 'Certifications', x: 70, y: 50 },
+    { id: 'contact', label: 'Contact', x: 85, y: 50 },
   ];
   
   const scrollToSection = (id: string) => {
@@ -59,53 +60,11 @@ const StarMapNavigation: React.FC = () => {
     }
   };
   
-  // Draw constellation lines
-  const drawConstellationLines = () => {
-    const lines = [];
-    
-    for (let i = 0; i < navLinks.length - 1; i++) {
-      const start = navLinks[i];
-      const end = navLinks[i + 1];
-      
-      lines.push(
-        <line 
-          key={`line-${i}`}
-          x1={`${start.x}%`}
-          y1={`${start.y}%`}
-          x2={`${end.x}%`}
-          y2={`${end.y}%`}
-          stroke="rgba(255, 105, 180, 0.3)"
-          strokeWidth="1"
-          strokeDasharray="5,5"
-        />
-      );
-    }
-    
-    // Connect last to first
-    const start = navLinks[navLinks.length - 1];
-    const end = navLinks[0];
-    
-    lines.push(
-      <line 
-        key="line-close"
-        x1={`${start.x}%`}
-        y1={`${start.y}%`}
-        x2={`${end.x}%`}
-        y2={`${end.y}%`}
-        stroke="rgba(255, 105, 180, 0.3)"
-        strokeWidth="1"
-        strokeDasharray="5,5"
-      />
-    );
-    
-    return lines;
-  };
+  
   
   return (
     <div className="relative h-20 my-8">
-      <svg className="absolute inset-0 w-full h-full">
-        {drawConstellationLines()}
-      </svg>
+      
       
       {navLinks.map((link) => (
         <div 
@@ -121,7 +80,7 @@ const StarMapNavigation: React.FC = () => {
             <Star 
               className={`text-cosmic-star ${hoveredStar === link.id ? 'text-cosmic-neon' : ''}`}
               fill={hoveredStar === link.id ? "rgba(255, 105, 180, 0.5)" : "none"}
-              size={hoveredStar === link.id ? 24 : 20}
+              size={hoveredStar === link.id ? 20 : 16}
             />
             
             {/* Glow effect */}
@@ -137,8 +96,8 @@ const StarMapNavigation: React.FC = () => {
             
             {/* Label */}
             <div 
-              className={`absolute mt-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xs font-orbitron transition-opacity duration-300 ${
-                hoveredStar === link.id ? 'opacity-100 text-cosmic-neon' : 'opacity-0 text-cosmic-star'
+              className={`absolute mt-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-sm font-orbitron transition-opacity duration-300 ${
+                hoveredStar === link.id ? 'opacity-100 text-cosmic-neon' : 'opacity-100 text-cosmic-star'
               }`}
             >
               {link.label}

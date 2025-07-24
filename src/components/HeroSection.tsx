@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
         
         {/* Tagline */}
         <div className="relative mb-12">
-          <p className="text-xl text-[#4B0082] font-orbitron mb-2">
+          <p className="text-xl text-[#F5F5F5] font-orbitron mb-2">
             A Developer Exploring the Galaxies of Code
           </p>
           <div className="h-[2px] w-48 bg-[#00FFFF] mx-auto" />
@@ -47,20 +47,22 @@ const HeroSection: React.FC = () => {
           
           {/* Blurb Text */}
           <p className="text-[#F5F5F5] text-lg max-w-[500px] mx-auto relative z-10"
-             style={{ textShadow: '0 0 5px #FF69B4' }}>
-            I'm Mathwaque Rufus, a developer crafting stellar solutions in the vast universe of tech. 
-            Let's explore my cosmic journey together!
+             style={{ textShadow: '0 0 8px #FF69B4' }}>
+            I'm Mathwaque Rufus, a full-stack developer with a passion for building intuitive and dynamic user experiences. Currently seeking opportunities to apply my skills in a collaborative and innovative environment.
           </p>
         </div>
-        
-        {/* Discover More Button */}
-        <button
-          onClick={scrollToAbout}
-          className="px-8 py-3 rounded-full bg-[#1E90FF] text-[#F5F5F5] font-orbitron
-                   hover:bg-[#FF69B4] transition-colors duration-300 relative z-10"
-        >
-          Discover More
-        </button>
+
+        <div className="flex justify-center space-x-4">
+          <a href="/resume" target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full bg-[#1E90FF] text-[#F5F5F5] font-orbitron hover:bg-[#FF69B4] transition-colors duration-300 relative z-10">
+            View Resume
+          </a>
+          <button
+            onClick={scrollToAbout}
+            className="px-8 py-3 rounded-full bg-transparent border-2 border-[#1E90FF] text-[#F5F5F5] font-orbitron hover:bg-[#1E90FF] transition-colors duration-300 relative z-10"
+          >
+            Discover More
+          </button>
+        </div>
         
         {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">

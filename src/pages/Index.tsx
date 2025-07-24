@@ -6,6 +6,7 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import SkillsSection from '@/components/SkillsSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import CertificationsSection from '@/components/CertificationsSection';
 import ContactSection from '@/components/ContactSection';
 import ScrollToTop from '@/components/ScrollToTop';
 import CursorEffect from '@/components/CursorEffect';
@@ -33,11 +34,24 @@ const Index = () => {
       
       {/* Main Content */}
       <main>
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ContactSection />
+        <div id="home">
+          <HeroSection />
+        </div>
+        <div id="about">
+          <AboutSection />
+        </div>
+        <div id="skills">
+          <SkillsSection />
+        </div>
+        <div id="projects">
+          <ProjectsSection />
+        </div>
+        <div id="certifications">
+          <CertificationsSection />
+        </div>
+        <div id="contact">
+          <ContactSection />
+        </div>
       </main>
       
       {/* UI Elements */}

@@ -72,9 +72,15 @@ const ProjectsSection: React.FC = () => {
                       {project.title}
                     </h3>
                     
-                    <p className="text-cosmic-star mb-4">
-                      {project.description}
-                    </p>
+                    <div className="text-cosmic-star mb-4">
+                      <h4 className="font-orbitron text-cosmic-electric mb-1">The Challenge</h4>
+                      <p className="text-sm">{project.problem}</p>
+                    </div>
+
+                    <div className="text-cosmic-star mb-4">
+                      <h4 className="font-orbitron text-cosmic-electric mb-1">The Solution</h4>
+                      <p className="text-sm">{project.solution}</p>
+                    </div>
                     
                     {/* Technologies */}
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -193,7 +199,14 @@ const ProjectsSection: React.FC = () => {
                 </div>
                 
                 <div className="text-cosmic-star">
-                  <p className="mb-4 text-lg leading-relaxed">{project.description}</p>
+                  <div className="mb-4">
+                    <h4 className="font-orbitron text-cosmic-electric mb-1">The Challenge</h4>
+                    <p className="text-sm leading-relaxed">{project.problem}</p>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="font-orbitron text-cosmic-electric mb-1">The Solution</h4>
+                    <p className="text-sm leading-relaxed">{project.solution}</p>
+                  </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>

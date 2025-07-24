@@ -1,7 +1,8 @@
+
 export interface Skill {
   id: number;
   name: string;
-  proficiency: number;
+  category: string;
   color: string;
   icon: string;
 }
@@ -9,145 +10,79 @@ export interface Skill {
 export interface Project {
   id: number;
   title: string;
-  description: string;
+  problem: string;
+  solution: string;
   technologies: string[];
   image: string;
-  demoUrl: string;
-  githubUrl: string;
+  liveDemoUrl: string;
+  githubUrl:string;
+}
+
+export interface Certification {
+  id: number;
+  title: string;
+  issuer: string;
+  url: string;
 }
 
 export const skills: Skill[] = [
-  {
-    id: 1,
-    name: "HTML",
-    proficiency: 90,
-    color: "#FF5733",
-    icon: "📄"
-  },
-  {
-    id: 2,
-    name: "CSS",
-    proficiency: 85,
-    color: "#2965f1",
-    icon: "🎨"
-  },
-  {
-    id: 3,
-    name: "JavaScript",
-    proficiency: 80,
-    color: "#f0db4f",
-    icon: "📜"
-  },
-  {
-    id: 4,
-    name: "React",
-    proficiency: 85,
-    color: "#61dafb",
-    icon: "⚛️"
-  },
-  {
-    id: 5,
-    name: "TypeScript",
-    proficiency: 75,
-    color: "#007acc",
-    icon: "🔷"
-  },
-  {
-    id: 6,
-    name: "Node.js",
-    proficiency: 70,
-    color: "#68a063",
-    icon: "🟢"
-  },
-  {
-    id: 7,
-    name: "UI/UX",
-    proficiency: 75,
-    color: "#FF69B4",
-    icon: "🎯"
-  },
-  {
-    id: 8,
-    name: "Tailwind CSS",
-    proficiency: 85,
-    color: "#38b2ac",
-    icon: "🌊"
-  }
+  { id: 1, name: "HTML", category: "Frontend", color: "#FF5733", icon: "📄" },
+  { id: 2, name: "CSS", category: "Frontend", color: "#2965f1", icon: "🎨" },
+  { id: 3, name: "JavaScript", category: "Frontend", color: "#f0db4f", icon: "📜" },
+  { id: 4, name: "React", category: "Frontend", color: "#61dafb", icon: "⚛️" },
+  { id: 5, name: "TypeScript", category: "Frontend", color: "#007acc", icon: "🔷" },
+  { id: 6, name: "Python", category: "Backend", color: "#3776AB", icon: "🐍" },
+  { id: 7, name: "Flask", category: "Backend", color: "#000000", icon: "🌶️" },
+  { id: 8, name: "Django", category: "Backend", color: "#092E20", icon: "🎸" },
+  { id: 9, name: "Node.js", category: "Backend", color: "#68a063", icon: "🟢" },
+  { id: 10, name: "RESTful APIs", category: "Backend", color: "#d95f02", icon: "🔄" },
+  { id: 11, name: "MySQL", category: "Database", color: "#4479A1", icon: "🐬" },
+  { id: 12, name: "MongoDB", category: "Database", color: "#47A248", icon: "🍃" },
+  { id: 13, name: "PostgreSQL", category: "Database", color: "#336791", icon: "🐘" },
+  { id: 14, name: "Git & GitHub", category: "Tools", color: "#f1502f", icon: "🔧" },
+  { id: 15, name: "CI/CD", category: "Practices", color: "#f0b90b", icon: "🚀" },
+  { id: 16, name: "Agile", category: "Practices", color: "#663399", icon: "🔄" },
+  { id: 17, name: "AWS/GCP", category: "Others", color: "#FF9900", icon: "☁️" }
 ];
 
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Meal Planner",
-    description: "A comprehensive meal planning application that helps users organize their weekly meals, create shopping lists, and discover new recipes.",
+    title: "meal-planner",
+    problem: "Users need a way to plan their meals and track their nutrition.",
+    solution: "An intelligent tool for personalized meal planning and nutrition tracking. This project was showcased at a Tech Expo for its innovative approach.",
     technologies: ["React", "Node.js", "MongoDB", "Express"],
-    image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352",
-    demoUrl: "#",
+    image: "/images/meal-planner.png",
+    liveDemoUrl: "#",
     githubUrl: "https://github.com/Rusuf/meal-planner"
   },
   {
     id: 2,
-    title: "Vetstuff",
-    description: "A veterinary management system designed to help vet clinics manage appointments, patient records, and medical histories.",
-    technologies: ["React", "Firebase", "Tailwind CSS", "Redux"],
-    image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b",
-    demoUrl: "#",
-    githubUrl: "https://github.com/Rusuf/Vetstuff"
+    title: "PetCare Management System",
+    problem: "Pet owners need a simple way to manage their pet's health and appointments.",
+    solution: "A CRUD application using Django that increased scheduling productivity by 40%. Manages appointments, pet health records, and reminders.",
+    technologies: ["Django", "Python", "RESTful APIs"],
+    image: "/images/petcare.png",
+    liveDemoUrl: "#",
+    githubUrl: "https://github.com/Rusuf/PetCare"
   },
   {
     id: 3,
-    title: "WorkIBL",
-    description: "A workplace management tool that streamlines task allocation, team communication, and project tracking for improved productivity.",
-    technologies: ["Vue.js", "Node.js", "PostgreSQL", "Socket.io"],
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
-    demoUrl: "#",
-    githubUrl: "https://github.com/Rusuf/WorkIBL"
-  },
-  {
-    id: 4,
-    title: "Olaiserr-Mobile",
-    description: "A cross-platform mobile application that brings innovative features and intuitive design to enhance user experience on mobile devices.",
-    technologies: ["React Native", "Redux", "Firebase", "Expo"],
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3",
-    demoUrl: "#",
-    githubUrl: "https://github.com/Rusuf/Olaiserr-Mobile"
-  },
-  {
-    id: 5,
-    title: "Soufable",
-    description: "An interactive table reservation system for restaurants that simplifies the booking process and improves customer experience.",
-    technologies: ["React", "Express", "MongoDB", "Stripe API"],
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
-    demoUrl: "#",
-    githubUrl: "https://github.com/Rusuf/soufable"
-  },
-  {
-    id: 6,
-    title: "QAI",
-    description: "An AI-powered question answering system that provides accurate information across various domains through natural language processing.",
-    technologies: ["Python", "TensorFlow", "FastAPI", "React"],
-    image: "https://images.unsplash.com/photo-1535378620166-273708d44e4c",
-    demoUrl: "#",
-    githubUrl: "https://github.com/Rusuf/QAI"
-  },
-  {
-    id: 7,
-    title: "Blog Platform",
-    description: "A modern blogging platform with content management system, user authentication, and social sharing capabilities.",
-    technologies: ["Next.js", "GraphQL", "PostgreSQL", "Tailwind CSS"],
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643",
-    demoUrl: "#",
-    githubUrl: "https://github.com/Rusuf/blog"
-  },
-  {
-    id: 8,
-    title: "Python Learning Tool",
-    description: "An educational platform designed to help beginners learn Python programming through interactive lessons and exercises.",
-    technologies: ["Django", "Python", "JavaScript", "Docker"],
-    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
-    demoUrl: "#",
-    githubUrl: "https://github.com/Rusuf/python2"
+    title: "Public Health Analytics Tool",
+    problem: "There is a need for real-time disease tracking and visualization.",
+    solution: "An interactive dashboard using Python and Chart.js that won 1st place in a hackathon. Recognized for innovation in health data visualization.",
+    technologies: ["Python", "Chart.js", "Flask"],
+    image: "/images/health-analytics.png",
+    liveDemoUrl: "#",
+    githubUrl: "https://github.com/Rusuf/CEMA"
   }
+];
+
+export const certifications: Certification[] = [
+  { id: 1, title: "Meta Front-End Developer", issuer: "Coursera", url: "#" },
+  { id: 2, title: "Google IT Automation with Python", issuer: "Coursera", url: "#" },
+  { id: 3, title: "Responsive Web Design", issuer: "freeCodeCamp", url: "#" },
+  { id: 4, title: "JavaScript Algorithms & Data Structures", issuer: "freeCodeCamp", url: "#" }
 ];
 
 export const aboutTimeline = [
@@ -159,9 +94,9 @@ export const aboutTimeline = [
   },
   {
     id: 2,
-    year: "2021",
-    title: "University Projects & Team Collaboration",
-    description: "Deepened my understanding of software development through university coursework. Started working on collaborative projects with fellow students, gaining experience in version control and team development practices."
+    year: "2021-2025",
+    title: "Technical University of Kenya",
+    description: "Pursued a Bachelor of Science in Information Science. Relevant coursework included Web Programming, Software Engineering, Database Systems, and Human-Computer Interaction."
   },
   {
     id: 3,
@@ -178,13 +113,13 @@ export const aboutTimeline = [
   {
     id: 5,
     year: "2024",
-    title: "Portfolio Development & Advanced Skills",
-    description: "Building comprehensive portfolio showcasing my projects and skills. Focusing on advanced web technologies and preparing for final year projects. Continued participation in hackathons and coding challenges."
+    title: "Frontend Developer at Meallensai",
+    description: "Building and maintaining user interfaces with HTML, CSS, and JavaScript. Collaborating with designers and backend developers to ensure a cohesive experience and optimizing frontend performance."
   },
   {
     id: 6,
     year: "2025",
     title: "Final Year & Graduation",
-    description: "Completing my degree with a focus on full-stack development. Working on final year projects and preparing to transition into the professional tech industry. Ready to apply my accumulated knowledge in real-world applications."
+    description: "Completing my degree with a focus on full-stack development. Working on final year projects and preparing to graduate in December. Ready to apply my accumulated knowledge in real-world applications."
   }
 ];

@@ -205,7 +205,7 @@ const ContactSection: React.FC = () => {
               </a>
               
               <a 
-                href="https://linkedin.com/" 
+                href="https://linkedin.com/in/mathwaque-rufus"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-cosmic-space bg-opacity-50 rounded-lg border border-transparent hover:border-cosmic-neon transition-all duration-300 group"
@@ -220,7 +220,7 @@ const ContactSection: React.FC = () => {
               </a>
               
               <a 
-                href="https://twitter.com/" 
+                href="https://twitter.com/rufusxtra"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-cosmic-space bg-opacity-50 rounded-lg border border-transparent hover:border-cosmic-neon transition-all duration-300 group"
@@ -235,7 +235,7 @@ const ContactSection: React.FC = () => {
               </a>
               
               <a 
-                href="mailto:hello@example.com" 
+                href="mailto:mathwaquerufus@gmail.com"
                 className="flex items-center p-4 bg-cosmic-space bg-opacity-50 rounded-lg border border-transparent hover:border-cosmic-neon transition-all duration-300 group"
               >
                 <div className="mr-4 p-3 bg-cosmic-galaxy rounded-full text-white group-hover:bg-cosmic-neon group-hover:text-cosmic-space transition-colors duration-300">
@@ -243,7 +243,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-cosmic-electric font-orbitron">Email</h4>
-                  <p className="text-cosmic-star text-sm">hello@example.com</p>
+                  <p className="text-cosmic-star text-sm">mathwaquerufus@gmail.com</p>
                 </div>
               </a>
             </div>
