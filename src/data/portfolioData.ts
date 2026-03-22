@@ -176,7 +176,7 @@ export const aboutTimeline = [
     id: 2,
     year: "2021–2025",
     title: "Technical University of Kenya",
-    description: "Bachelor of Science in Information Science. Graduated November 2025. Coursework: Web Programming, Software Engineering, Database Systems, Human-Computer Interaction.",
+    description: "Bachelor of Science in Information Science. Coursework focused on Web Programming, Software Engineering, Database Systems, and Human-Computer Interaction.",
   },
   {
     id: 3,
@@ -199,17 +199,11 @@ export const aboutTimeline = [
   {
     id: 6,
     year: "2025",
-    title: "Graduated — BSc Information Science",
-    description: "Graduated from the Technical University of Kenya in November 2025 with a Bachelor of Science in Information Science.",
-  },
-  {
-    id: 7,
-    year: "2025",
     title: "Junior Software Engineer at SamzDixon Technologies",
     description: "Aug – Dec 2025. Built an AI-powered market intelligence engine processing POS transaction data and web trend signals. Engineered a high-performance Rust backend for analytical data pipelines.",
   },
   {
-    id: 8,
+    id: 7,
     year: "2025–Present",
     title: "Founded NiTip Africa",
     description: "Dec 2025. Founded NiTip Africa — a live M-Pesa tipping platform for Kenyan streamers. QR-code tipping, instant payouts, YouTube integration. Active beta at nitip.africa.",

@@ -52,10 +52,7 @@ const HeroSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex justify-center space-x-4">
-          <a href="/resume" className="px-8 py-3 rounded-full bg-[#1E90FF] text-[#F5F5F5] font-orbitron hover:bg-[#FF69B4] transition-colors duration-300 relative z-10">
-            View Resume
-          </a>
+        <div className="flex justify-center">
           <button
             onClick={scrollToAbout}
             className="px-8 py-3 rounded-full bg-transparent border-2 border-[#1E90FF] text-[#F5F5F5] font-orbitron hover:bg-[#1E90FF] transition-colors duration-300 relative z-10"

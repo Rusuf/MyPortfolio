@@ -37,7 +37,7 @@ const ResumePreview: React.FC = () => {
 
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-4 border-b-2 border-blue-400 pb-2">Summary</h2>
-            <p className="leading-relaxed">Software Engineer and Founder with hands-on experience building real-time data systems, analytical backends, and mobile payment infrastructure. Founded NiTip Africa — a live M-Pesa tipping platform for Kenyan streamers, featuring QR-code tipping, instant payouts, and YouTube integration. Previously engineered an AI-powered market intelligence engine at SamzDixon Technologies using a high-performance Rust backend. BSc Information Science graduate (Nov 2025) from the Technical University of Kenya.</p>
+            <p className="leading-relaxed">Software Engineer and Founder with hands-on experience building real-time data systems, analytical backends, and mobile payment infrastructure. Founded NiTip Africa — a live M-Pesa tipping platform for Kenyan streamers, featuring QR-code tipping, instant payouts, and YouTube integration. Previously engineered an AI-powered market intelligence engine at SamzDixon Technologies using a high-performance Rust backend.</p>
           </div>
 
           <div className="mb-8">
@@ -111,7 +111,7 @@ const ResumePreview: React.FC = () => {
             <h2 className="text-2xl font-bold mb-4 border-b-2 border-blue-400 pb-2">Education</h2>
             <div>
               <h3 className="text-xl font-bold">Bachelor of Science in Information Science</h3>
-              <p className="text-gray-400">Technical University of Kenya — Nairobi | 2021 – 2025 (Graduated November 2025)</p>
+              <p className="text-gray-400">Technical University of Kenya — Nairobi | 2021 – 2025</p>
             </div>
           </div>
 

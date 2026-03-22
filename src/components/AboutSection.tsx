@@ -33,21 +33,10 @@ const AboutSection: React.FC = () => {
               </p>
               <p className="text-lg mb-4">
                 My background spans mobile payment infrastructure, analytical data pipelines, and real-time
-                systems. I'm an Information Science graduate from the Technical University of Kenya,
-                and I'm looking to move into data analytics and software engineering roles.
+                systems. I am currently looking to move into data analytics and software engineering roles
+                where I can apply my experience with high-performance backends and live payment systems.
               </p>
-              <div className="flex gap-4 flex-wrap">
-                <a
-                  href="/resume"
-                  className="cosmic-button py-2 px-4 inline-flex items-center gap-2"
-                >
-                  <span>View Resume</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                  </svg>
-                </a>
-              </div>
+
             </div>
           </div>
         </div>
