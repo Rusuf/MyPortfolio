@@ -8,15 +8,15 @@ const HeroSection: React.FC = () => {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  
+
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden"
-             style={{
-               background: 'linear-gradient(135deg, #0A0A23 0%, #4B0082 100%)',
-             }}>
+      style={{
+        background: 'linear-gradient(135deg, #0A0A23 0%, #4B0082 100%)',
+      }}>
       {/* Twinkling Stars Effect - Add to your CSS */}
       <div className="stars-container absolute inset-0" />
-      
+
       {/* Main Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         {/* Title */}
@@ -26,34 +26,34 @@ const HeroSection: React.FC = () => {
             My Universe
           </span>
         </h1>
-        
+
         {/* Tagline */}
         <div className="relative mb-12">
           <p className="text-xl text-[#F5F5F5] font-orbitron mb-2">
-            A Developer Exploring the Galaxies of Code
+            Software Engineer · Founder · Building Real Systems
           </p>
           <div className="h-[2px] w-48 bg-[#00FFFF] mx-auto" />
         </div>
-        
+
         {/* Intro Blurb with Nebula Effect */}
         <div className="relative mb-12">
           {/* Nebula Cloud Background */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
                         w-[300px] h-[200px] opacity-20 pointer-events-none"
-               style={{
-                 background: 'radial-gradient(circle at center, #1E90FF 0%, transparent 70%)',
-                 filter: 'blur(20px)',
-               }} />
-          
+            style={{
+              background: 'radial-gradient(circle at center, #1E90FF 0%, transparent 70%)',
+              filter: 'blur(20px)',
+            }} />
+
           {/* Blurb Text */}
           <p className="text-[#F5F5F5] text-lg max-w-[500px] mx-auto relative z-10"
-             style={{ textShadow: '0 0 8px #FF69B4' }}>
-            I'm Mathwaque Rufus, a full-stack developer with a passion for building intuitive and dynamic user experiences. Currently seeking opportunities to apply my skills in a collaborative and innovative environment.
+            style={{ textShadow: '0 0 8px #FF69B4' }}>
+            I'm Mathwaque Rufus — Founder of NiTip Africa and Software Engineer. I build real-time data systems, analytical backends, and mobile payment infrastructure that solve real problems.
           </p>
         </div>
 
         <div className="flex justify-center space-x-4">
-          <a href="/resume" target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full bg-[#1E90FF] text-[#F5F5F5] font-orbitron hover:bg-[#FF69B4] transition-colors duration-300 relative z-10">
+          <a href="/resume" className="px-8 py-3 rounded-full bg-[#1E90FF] text-[#F5F5F5] font-orbitron hover:bg-[#FF69B4] transition-colors duration-300 relative z-10">
             View Resume
           </a>
           <button
@@ -63,7 +63,7 @@ const HeroSection: React.FC = () => {
             Discover More
           </button>
         </div>
-        
+
         {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ChevronDown className="text-[#F5F5F5]" size={32} />

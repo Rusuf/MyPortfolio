@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, Send, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Send, Twitter, Phone, MapPin } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
 const ContactSection: React.FC = () => {
@@ -11,19 +11,19 @@ const ContactSection: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [signalSent, setSignalSent] = useState(false);
   const { toast } = useToast();
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Start signal animation
     setSignalSent(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       toast({
@@ -31,40 +31,40 @@ const ContactSection: React.FC = () => {
         description: "I'll respond faster than light speed.",
         duration: 5000,
       });
-      
+
       setFormData({
         name: '',
         email: '',
         message: ''
       });
       setIsSubmitting(false);
-      
+
       // Reset animation after 2 seconds
       setTimeout(() => {
         setSignalSent(false);
       }, 2000);
     }, 1500);
   };
-  
+
   return (
     <section id="contact" className="cosmic-section">
       <div className="cosmic-container">
         <h2 className="cosmic-title text-center">Get in Touch</h2>
-        
+
         <div className="max-w-3xl mx-auto text-center mb-12">
           <p className="text-lg text-cosmic-star">
             Interested in collaboration, have a project in mind, or want to discuss opportunities?
             Feel free to reach out through any of the channels below.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {/* Contact Form */}
           <div className="bg-cosmic-nebula bg-opacity-20 p-8 rounded-lg backdrop-blur-sm border border-cosmic-galaxy relative">
             <h3 className="text-xl font-orbitron font-bold text-cosmic-electric mb-6">
               Send a Message
             </h3>
-            
+
             <form onSubmit={handleSubmit}>
               <div className="mb-6">
                 <label htmlFor="name" className="block text-cosmic-star mb-2 font-orbitron">Name</label>
@@ -79,7 +79,7 @@ const ContactSection: React.FC = () => {
                   placeholder="Your name"
                 />
               </div>
-              
+
               <div className="mb-6">
                 <label htmlFor="email" className="block text-cosmic-star mb-2 font-orbitron">Email</label>
                 <input
@@ -93,7 +93,7 @@ const ContactSection: React.FC = () => {
                   placeholder="Your email"
                 />
               </div>
-              
+
               <div className="mb-6">
                 <label htmlFor="message" className="block text-cosmic-star mb-2 font-orbitron">Message</label>
                 <textarea
@@ -107,7 +107,7 @@ const ContactSection: React.FC = () => {
                   placeholder="Type your message here..."
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 disabled={isSubmitting}
@@ -121,7 +121,7 @@ const ContactSection: React.FC = () => {
                 )}
               </button>
             </form>
-            
+
             {/* Signal sent animation */}
             {signalSent && (
               <div className="absolute inset-0 pointer-events-none">
@@ -129,11 +129,11 @@ const ContactSection: React.FC = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <div className="w-4 h-4 rounded-full bg-cosmic-electric animate-ping"></div>
                 </div>
-                
+
                 {/* Signal waves */}
                 {[...Array(3)].map((_, i) => (
-                  <div 
-                    key={i} 
+                  <div
+                    key={i}
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full border border-cosmic-electric"
                     style={{
                       width: `${(i + 1) * 50}px`,
@@ -144,9 +144,9 @@ const ContactSection: React.FC = () => {
                     }}
                   ></div>
                 ))}
-                
+
                 {/* Flying rocket */}
-                <div 
+                <div
                   className="absolute"
                   style={{
                     top: '50%',
@@ -164,10 +164,10 @@ const ContactSection: React.FC = () => {
                       <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
                     </svg>
                   </div>
-                  
+
                   {/* Trailing stars */}
                   {[...Array(5)].map((_, i) => (
-                    <div 
+                    <div
                       key={i}
                       className="absolute w-1 h-1 rounded-full bg-cosmic-star"
                       style={{
@@ -181,15 +181,15 @@ const ContactSection: React.FC = () => {
               </div>
             )}
           </div>
-          
+
           {/* Social Links */}
           <div className="flex flex-col justify-center">
             <h3 className="text-xl font-orbitron font-bold text-cosmic-electric mb-8">
               Connect With Me
             </h3>
-            
+
             <div className="space-y-6">
-              <a 
+              <a
                 href="https://github.com/Rusuf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -203,10 +203,10 @@ const ContactSection: React.FC = () => {
                   <p className="text-cosmic-star text-sm">View my projects and contributions</p>
                 </div>
               </a>
-              
-              <a 
-                href="https://linkedin.com/in/mathwaque-rufus"
-                target="_blank" 
+
+              <a
+                href="https://linkedin.com/in/rufus-mathwaque"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-cosmic-space bg-opacity-50 rounded-lg border border-transparent hover:border-cosmic-neon transition-all duration-300 group"
               >
@@ -218,10 +218,10 @@ const ContactSection: React.FC = () => {
                   <p className="text-cosmic-star text-sm">Let's connect professionally</p>
                 </div>
               </a>
-              
-              <a 
-                href="https://twitter.com/rufusxtra"
-                target="_blank" 
+
+              <a
+                href="https://x.com/rufusxtra"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-cosmic-space bg-opacity-50 rounded-lg border border-transparent hover:border-cosmic-neon transition-all duration-300 group"
               >
@@ -229,12 +229,12 @@ const ContactSection: React.FC = () => {
                   <Twitter size={24} />
                 </div>
                 <div>
-                  <h4 className="text-cosmic-electric font-orbitron">Twitter</h4>
+                  <h4 className="text-cosmic-electric font-orbitron">X (Twitter)</h4>
                   <p className="text-cosmic-star text-sm">Follow my tech journey</p>
                 </div>
               </a>
-              
-              <a 
+
+              <a
                 href="mailto:mathwaquerufus@gmail.com"
                 className="flex items-center p-4 bg-cosmic-space bg-opacity-50 rounded-lg border border-transparent hover:border-cosmic-neon transition-all duration-300 group"
               >
@@ -246,6 +246,29 @@ const ContactSection: React.FC = () => {
                   <p className="text-cosmic-star text-sm">mathwaquerufus@gmail.com</p>
                 </div>
               </a>
+
+              <a
+                href="tel:+254758503824"
+                className="flex items-center p-4 bg-cosmic-space bg-opacity-50 rounded-lg border border-transparent hover:border-cosmic-neon transition-all duration-300 group"
+              >
+                <div className="mr-4 p-3 bg-emerald-700 rounded-full text-white group-hover:bg-cosmic-neon group-hover:text-cosmic-space transition-colors duration-300">
+                  <Phone size={24} />
+                </div>
+                <div>
+                  <h4 className="text-cosmic-electric font-orbitron">Phone</h4>
+                  <p className="text-cosmic-star text-sm">+254 758 503 824</p>
+                </div>
+              </a>
+
+              <div className="flex items-center p-4 bg-cosmic-space bg-opacity-50 rounded-lg border border-transparent">
+                <div className="mr-4 p-3 bg-cosmic-galaxy rounded-full text-white">
+                  <MapPin size={24} />
+                </div>
+                <div>
+                  <h4 className="text-cosmic-electric font-orbitron">Location</h4>
+                  <p className="text-cosmic-star text-sm">Nairobi, Kenya</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
